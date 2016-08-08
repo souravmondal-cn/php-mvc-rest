@@ -1,6 +1,6 @@
 <?php
 
-namespace Controllers;
+namespace Controllers\Api;
 
 use Controllers\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +19,7 @@ class UserController extends Controller
     }
 
     /**
-     * @api {GET} /users  3.GetAll
+     * @api {GET} /api/users  3.GetAll
      * @apiName UserList
      * @apiGroup User
      * @apiVersion 1.0.0
@@ -77,7 +77,7 @@ class UserController extends Controller
     }
 
     /**
-     * @api {GET} /user/{userid}  2.Details
+     * @api {GET} /api/user/{userid}  2.Details
      * @apiName UserDetails
      * @apiGroup User
      * @apiVersion 1.0.0
@@ -122,7 +122,7 @@ class UserController extends Controller
     }
 
     /**
-     * @api {POST} /user/add  1.Add
+     * @api {POST} /api/user/add  1.Add
      * @apiName UserAdd
      * @apiGroup User
      * @apiVersion 1.0.0
@@ -173,7 +173,7 @@ class UserController extends Controller
     }
 
     /**
-     * @api {PUT} /user/update/{userId}  4.Update
+     * @api {PUT} /api/user/update/{userId}  4.Update
      * @apiName UserUpdate
      * @apiGroup User
      * @apiVersion 1.0.0
@@ -224,7 +224,7 @@ class UserController extends Controller
     }
 
     /**
-     * @api {DELETE} /user/delete/{userId}  5.Delete
+     * @api {DELETE} /api/user/delete/{userId}  5.Delete
      * @apiName UserDelete
      * @apiGroup User
      * @apiVersion 1.0.0
@@ -262,7 +262,7 @@ class UserController extends Controller
     }
     
     /**
-     * @api {POST} /user/authencate  6.Login
+     * @api {POST} /api/user/authencate  6.Login
      * @apiName UserLogin
      * @apiGroup User
      * @apiVersion 1.0.0
