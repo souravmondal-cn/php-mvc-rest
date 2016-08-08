@@ -1,4 +1,4 @@
-# Resource Management system
+# A sample PHP MVC based Application on the base of Silex framework
 
 ## Installation guide
 
@@ -16,10 +16,15 @@ make migrate
 ### Nginx server setup
 ```
 Change the root to your project directory.
-sudo cp dev/nginx/resourcemanagement.conf /opt/local/etc/nginx/sites/resourcemanagement.conf
+sudo cp dev/nginx/sample-rest-api.conf /Path to Nginx/nginx/sites/sample-rest-api.conf
 
 ```
 
+Do the changes you for nginx config file.
+
+Add the virtual host to the system hosts file.
+
 ```
-sudo bash -c 'echo "127.0.0.1   resourcemanagement.dev" >> /etc/hosts'
+sudo bash -c 'echo "127.0.0.1   samplephpapp.dev" >> /etc/hosts'
 ```
+
