@@ -1,0 +1,7 @@
+local-settings.php
+.DS_Store
+/nbproject
+/vendor/
+/uploads/
+.project
+dev/apiDocumentations

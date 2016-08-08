@@ -1,0 +1,27 @@
+{
+    "name": "sample-rest-api",
+    "description": "Sample Rest API with MVC and OOP archicrure",
+    "authors": [
+        {
+            "name": "Sourav Mondal",
+            "email": "souravm@capitalnumbers.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "*",
+        "doctrine/migrations": "*",
+        "doctrine/doctrine-migrations-bundle": "*",
+        "silex/silex": "*",
+        "symfony/serializer": "*",
+        "symfony/property-access": "*"
+    },
+    "require-dev": {
+        "phpmd/phpmd": "*",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
