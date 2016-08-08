@@ -13,7 +13,8 @@
         "doctrine/doctrine-migrations-bundle": "*",
         "silex/silex": "*",
         "symfony/serializer": "*",
-        "symfony/property-access": "*"
+        "symfony/property-access": "*",
+        "twig/twig": "*"
     },
     "require-dev": {
         "phpmd/phpmd": "*",
