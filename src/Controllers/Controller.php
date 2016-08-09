@@ -19,6 +19,7 @@ class Controller
         $encoders = array(new XmlEncoder(), new JsonEncoder());
         $normalizers = array(new ObjectNormalizer());
         $this->serializer = new Serializer($normalizers, $encoders);
+        $this->session = $this->app['session'];
     }
     
     protected function denyAccessWithoutLogin()

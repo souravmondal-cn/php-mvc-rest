@@ -1,10 +1,15 @@
 <?php
 
 use Controllers\Api\UserController;
-use Utilities\ApiAuthencation;
+use Controllers\Web\UserController as UserWebController;
+use Controllers\Api\ApiAuthencation;
 
-$app['UserController.controller'] = $app->factory(function() use ($app) {
+$app['UserController.api'] = $app->factory(function() use ($app) {
     return new UserController($app);
+});
+
+$app['UserController.web'] = $app->factory(function() use ($app) {
+    return new UserWebController($app);
 });
 
 $app['ApiAuthencation'] = $app->factory(function() use ($app) {
@@ -22,13 +27,21 @@ $app->get('/api', function () use ($app) {
         'version' => '1.0.0'
     ), 200);
 });
-$app->get('/api/users', 'UserController.controller:getAll');
-$app->get('/api/user/{userId}', 'UserController.controller:getUser');
-$app->post('/api/user/add', 'UserController.controller:addUser');
-$app->put('/api/user/update/{userId}', 'UserController.controller:updateUser');
-$app->delete('/api/user/delete/{userId}', 'UserController.controller:deleteUser');
-$app->post('/api/user/authencate', 'UserController.controller:login');
+$app->get('/api/users', 'UserController.api:getAll');
+$app->get('/api/user/{userId}', 'UserController.api:getUser');
+$app->post('/api/user/add', 'UserController.api:addUser');
+$app->put('/api/user/update/{userId}', 'UserController.api:updateUser');
+$app->delete('/api/user/delete/{userId}', 'UserController.api:deleteUser');
+$app->post('/api/user/authencate', 'UserController.api:login');
 
 /*
  * Web App Routes
  */
+
+$app->get('/', 'UserController.web:home');
+$app->get('/login', 'UserController.web:login');
+$app->post('/login', 'UserController.web:loginCheck');
+$app->get('/signup', 'UserController.web:signup');
+$app->post('/signup', 'UserController.web:signupProcess');
+$app->get('/logout', 'UserController.web:logout');
+$app->get('/home', 'UserController.web:home');

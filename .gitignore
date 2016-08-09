@@ -5,3 +5,4 @@ local-settings.php
 /uploads/
 .project
 dev/apiDocumentations
+assets/libs/
